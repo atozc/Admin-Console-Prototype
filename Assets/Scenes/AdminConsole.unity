@@ -1181,8 +1181,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1383988886}
   - component: {fileID: 1383988888}
-  - component: {fileID: 1383988887}
-  - component: {fileID: 1383988889}
   m_Layer: 0
   m_Name: AdminMgr
   m_TagString: Untagged
@@ -1204,18 +1202,6 @@ Transform:
   m_Father: {fileID: 1173808811}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1383988887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383988885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac7f4c12fc78784db3487ef4063939e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1383988888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,21 +1214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6d194386e0dc840a22d0fcb3a8ad29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1383988889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383988885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 868dfb77049cefd48a079775e905d89c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  packetSpeedText: {fileID: 1466622075}
-  badPacketRatioText: {fileID: 2017596089}
-  submit: {fileID: 1845626657}
 --- !u!1 &1466622073
 GameObject:
   m_ObjectHideFlags: 0
