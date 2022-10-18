@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+
 public class AdminReadFile : MonoBehaviour
 {
     void Start()
@@ -12,7 +13,7 @@ public class AdminReadFile : MonoBehaviour
 
     IEnumerator GetText()
     {
-        UnityWebRequest www = new UnityWebRequest("https://www.cse.unr.edu/~crystala/taiser/test");
+        UnityWebRequest www = new UnityWebRequest("https://www.cse.unr.edu/~crystala/taiser/test/data/");
         www.downloadHandler = new DownloadHandlerBuffer();
         yield return www.SendWebRequest();
 
