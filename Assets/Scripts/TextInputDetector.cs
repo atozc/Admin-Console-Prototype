@@ -18,12 +18,12 @@ class TextInputDetector : MonoBehaviour
     {
         if (inp.text == "admin" | inp.text == "Admin" | inp.text == "ADMIN")
         {
-            //Debug.Log("Admin entered as input");
+            //Debug.Log("Variation of 'admin' entered as input");
             AdminPanel.SetActive(true);   //Load admin console panel
         }
         else
         {
-            Panel.SetActive(true); //Loads next page w/o admin
+            Panel.SetActive(true); //Loads next scene w/o admin
         }
     }
 }

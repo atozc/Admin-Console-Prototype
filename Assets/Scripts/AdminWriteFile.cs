@@ -7,6 +7,9 @@ using System.IO;
 using System.Text;
 using System.Xml;
 
+
+// Altered from instrumentMgr.cs from Taiser 
+
 [System.Serializable]
 public class Session
 {
@@ -17,12 +20,9 @@ public class Session
 [System.Serializable]
 public class TaiserAdminRecord
 {
-    /// <summary>
-    /// From start of game
-    /// </summary>
     public float secondsFromStart;
-    public string eventName; //Is the .ToString() of TaiserEventTypes below
-    public List<string> eventModifiers; // Only one event type has event modifiers right now
+    public string eventName; 
+    public List<string> eventModifiers; 
 }
 
 
@@ -83,6 +83,7 @@ public class AdminWriteFile : MonoBehaviour
 
     public void Send()
     {
+        // Converts user input to text
         usernameText = userName.text;
         packetSpeedText = packetSpeed.text;
         badPacketRatioText = badPacketRatio.text;
