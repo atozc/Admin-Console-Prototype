@@ -13,7 +13,7 @@ public class AdminReadFile : MonoBehaviour
 
     IEnumerator GetText()
     {
-        UnityWebRequest www = new UnityWebRequest("https://www.cse.unr.edu/~crystala/taiser/test/data/");
+        UnityWebRequest www = new UnityWebRequest("https://www.cse.unr.edu/~crystala/taiser/test/data/Admin.txt");
         www.downloadHandler = new DownloadHandlerBuffer();
         yield return www.SendWebRequest();
 
