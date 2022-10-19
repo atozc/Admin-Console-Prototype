@@ -105,8 +105,8 @@ public class AdminWriteFile : MonoBehaviour
         XmlDocument map = new XmlDocument();
         map.LoadXml("<level></level>");
         byte[] levelData = Encoding.UTF8.GetBytes(MakeHeaderString() + MakeRecords());
-        string fileName = new string(usernameText.ToCharArray()) + session.dayandTime; 
-        fileName = fileName + ".csv";
+        //string fileName = new string(usernameText.ToCharArray()) + session.dayandTime; 
+        string fileName = "parameters.csv";
         Debug.Log("FileName: " + fileName);
 
         WWWForm form = new WWWForm();
@@ -151,7 +151,7 @@ public class AdminWriteFile : MonoBehaviour
     public string MakeHeaderString()
     {
         string header = "";
-        header += usernameText + ", " + ", " + session.dayandTime + eoln;
+        header += usernameText + ", " + eoln;
         header += "Packet Speed: ," + packetSpeedText + eoln;
         header += "Bad Packet Ratio: ," + badPacketRatioText + eoln;
         return header;

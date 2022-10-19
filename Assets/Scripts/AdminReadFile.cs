@@ -6,14 +6,16 @@ using UnityEngine.Networking;
 
 public class AdminReadFile : MonoBehaviour
 {
+    public string dataResults;
+
     void Start()
     {
-        StartCoroutine(GetText());
+        StartCoroutine(GetData());
     }
 
-    IEnumerator GetText()
+    IEnumerator GetData()
     {
-        UnityWebRequest www = new UnityWebRequest("https://www.cse.unr.edu/~crystala/taiser/test/data/");
+        UnityWebRequest www = new UnityWebRequest("https://www.cse.unr.edu/~crystala/taiser/test/data/parameters.csv");
         www.downloadHandler = new DownloadHandlerBuffer();
         yield return www.SendWebRequest();
 
@@ -28,6 +30,11 @@ public class AdminReadFile : MonoBehaviour
 
             // Or retrieve results as binary data
             byte[] results = www.downloadHandler.data;
+            //Debug.Log(results);
         }
+
+        dataResults = www.downloadHandler.text;
     }
 }
+
+
