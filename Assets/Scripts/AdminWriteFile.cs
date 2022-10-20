@@ -91,7 +91,7 @@ public class AdminWriteFile : MonoBehaviour
         session.dayandTime = System.DateTime.Now.ToUniversalTime().ToString();
         string tmp = System.DateTime.Now.ToLocalTime().ToString();
 
-        using (StreamWriter sw = new StreamWriter(File.Open(Path.Combine(TaiserAdminFolder, usernameText + ".csv"), FileMode.Create), Encoding.UTF8))
+        using (StreamWriter sw = new StreamWriter(File.Open(Path.Combine(TaiserAdminFolder, "parameters.csv"), FileMode.Create), Encoding.UTF8))
         {
             WriteHeader(sw);
             WriteRecords(sw);
@@ -151,9 +151,9 @@ public class AdminWriteFile : MonoBehaviour
     public string MakeHeaderString()
     {
         string header = "";
-        header += usernameText + ", " + eoln;
-        header += "Packet Speed: ," + packetSpeedText + eoln;
-        header += "Bad Packet Ratio: ," + badPacketRatioText + eoln;
+        //header += usernameText + ", " + eoln;
+        header += "Packet Speed ," + packetSpeedText + eoln;
+        header += "Bad Packet Ratio ," + badPacketRatioText + eoln;
         return header;
     }
 

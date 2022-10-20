@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.Text;
 
 
 public class AdminReadFile : MonoBehaviour
 {
     public string dataResults;
+
+    public string newDataResults;
+
+    public float packetSpeed;
+    public float badPacketRatio;
 
     void Start()
     {
@@ -15,8 +21,8 @@ public class AdminReadFile : MonoBehaviour
 
     IEnumerator GetData()
     {
-        UnityWebRequest www = new UnityWebRequest("https://www.cse.unr.edu/~crystala/taiser/test/data/parameters.csv");
-        www.downloadHandler = new DownloadHandlerBuffer();
+        UnityWebRequest www = UnityWebRequest.Get("https://www.cse.unr.edu/~crystala/taiser/test/data/parameters.csv");
+        //www.downloadHandler = new DownloadHandlerBuffer();
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)

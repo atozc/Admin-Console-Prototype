@@ -871,7 +871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1006380615
 Transform:
   m_ObjectHideFlags: 0
@@ -898,8 +898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11083d49c3a1d5f4f87b0d102023e7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  packetSpeed: 7
-  badPacketRatio: 0.2
+  packetSpeed: 0
+  badPacketRatio: 0
 --- !u!1 &1153413961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1077,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6d194386e0dc840a22d0fcb3a8ad29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataResults: 
+  newDataResults: 
+  packetSpeed: 0
+  badPacketRatio: 0
 --- !u!1 &1466622073
 GameObject:
   m_ObjectHideFlags: 0
