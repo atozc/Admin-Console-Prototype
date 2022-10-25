@@ -11,8 +11,8 @@ public class AdminReadFile : MonoBehaviour
 
     public string newDataResults;
 
-    public float packetSpeed;
-    public float badPacketRatio;
+    public string packetSpeed;
+    public string badPacketRatio;
 
     void Start()
     {
@@ -40,6 +40,16 @@ public class AdminReadFile : MonoBehaviour
         }
 
         dataResults = www.downloadHandler.text;
+
+        string[] splitData = dataResults.Split('\n');
+        packetSpeed = splitData[0];  
+        badPacketRatio = splitData[1];
+
+        string[] splitPacketSpeed = packetSpeed.Split(',');
+        packetSpeed = splitPacketSpeed[1];
+
+        string[] splitBadPacketRatio = badPacketRatio.Split(',');
+        badPacketRatio = splitBadPacketRatio[1];
     }
 }
 
